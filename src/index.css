@@ -1,0 +1,11 @@
+html,
+body,
+div,
+li,
+ul,
+Link,
+h1,
+a {
+  margin: 0;
+  padding: 0;
+}

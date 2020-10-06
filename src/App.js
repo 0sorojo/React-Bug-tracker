@@ -1,11 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Login from "./Views/Login/login";
+import { BrowserRouter as Router } from "react-router-dom";
+import Sidebar from "./Views/Sidebar/sidebar";
 
 function App() {
   const { auth } = useSelector((state) => state);
 
-  return <>{!auth.loggedIn ? <Login /> : <h1>Welcome</h1>}</>;
+  return <Router>{!auth.loggedIn ? <Login /> : <Sidebar />}</Router>;
 }
 
 export default App;
