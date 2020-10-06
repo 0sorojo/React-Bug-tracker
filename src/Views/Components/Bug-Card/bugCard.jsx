@@ -1,12 +1,11 @@
 import React from "react";
 import "./bugCard.css";
-import PriorityController from "../../Controllers/priorityController";
-import priorityController from "../../Controllers/priorityController";
+import PriorityController from "../../../Controllers/priorityController";
 
 export default (props) => {
   const { name, priority, version } = props.bug;
 
-  const { level, color } = priorityController(priority);
+  const { level, color } = PriorityController(priority);
 
   function Clicked() {
     props.Clicked(name);

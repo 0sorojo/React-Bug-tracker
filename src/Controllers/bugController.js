@@ -10,10 +10,10 @@ export function retrieveBugs() {
       details: "Crashes after 3 seconds",
       steps: "Open application and it will crash",
       version: "V2.0",
+      priority: 1,
       assigned: "Lo",
       creator: "D Goings",
-      priority: 1,
-      tiem: "18:17",
+      time: "18:17",
     })
   );
 
@@ -21,13 +21,13 @@ export function retrieveBugs() {
     new bugModel({
       _id: 123773,
       name: "Won't Load",
-      details: " home page svg won't load",
+      details: "home page svg won't load",
       steps: "Open application and homepage svg wont load",
       version: "V2.0",
+      priority: 3,
       assigned: "Lo",
       creator: "D Goings",
-      priority: 3,
-      tiem: "18:35",
+      time: "18:35",
     })
   );
 
