@@ -1,8 +1,8 @@
 export default offscreenBuffering;
 
 function bug(bug) {
-  if (bug != udnefined) {
-    this._id = bud._id;
+  if (bug !== undefined) {
+    this._id = bug._id;
     this.name = bug.name;
     this.details = bug.details;
     this.steps = bug.steps;

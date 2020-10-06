@@ -1,0 +1,48 @@
+.login-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: white;
+  margin: 0;
+  padding: 10px;
+}
+
+.input {
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 5px;
+  width: 75%;
+}
+
+.button {
+  margin: 5px 0;
+  padding: 5px;
+  width: 50%;
+  border-radius: 5px;
+  background-color: rgb(195, 241, 109);
+}
+
+button:hover {
+  transition: all 0.2s;
+  background-color: rgb(29, 175, 92);
+  color: white;
+}
+
+.login-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  background: radial-gradient(
+    circle,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
