@@ -26,7 +26,7 @@ export function retrieveBugs() {
       version: "V2.0",
       assigned: "Lo",
       creator: "D Goings",
-      priority: 4,
+      priority: 3,
       tiem: "18:35",
     })
   );

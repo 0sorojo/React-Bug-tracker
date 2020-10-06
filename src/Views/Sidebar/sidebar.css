@@ -1,19 +1,23 @@
 .side-bar {
-  position: fixed;
-  width: 20%;
   height: 100vh;
   background: rgba(0, 212, 255, 1) 100%;
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
+  border-right: 3px solid rgba(9, 9, 121, 1);
 }
 
 .title-link {
+  display: flex;
   color: white;
   font-size: 25px;
+  padding: 5px;
   margin-bottom: 20px;
   text-decoration: none;
   text-align: center;
+  align-items: center;
+  justify-content: center;
   border-bottom: 1px solid rgba(9, 9, 121, 1);
   flex: 1;
 }
