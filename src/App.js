@@ -15,12 +15,14 @@ function App() {
         <Login />
       ) : (
         <section className="big-container">
-          <Sidebar />
-          <Switch>
-            <Route path="/viewbugs">
-              <ViewBugPage />
-            </Route>
-          </Switch>
+          <div className="flex-container">
+            <Sidebar />
+            <Switch>
+              <Route path="/viewbugs">
+                <ViewBugPage />
+              </Route>
+            </Switch>
+          </div>
         </section>
       )}
     </Router>
