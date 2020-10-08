@@ -13,66 +13,86 @@ const BugForm = (props) => {
   };
 
   return (
-    <div className="bug-create">
+    <div className="form-container">
       <h1>{props.title}</h1>
-      <form>
-        <label>Name:</label>
-        <input
-          name="name"
-          placehodler="Bug Name"
-          onChange={inputChanged}
-          value={bugObject.name}
-          required
-        />
+      <form className="bug-form">
+        <div className="form-section">
+          <label className="form-name">Name:</label>
+          <input
+            name="name"
+            placehodler="Bug Name"
+            onChange={inputChanged}
+            value={bugObject.name}
+            className="form-input"
+            required
+          />
+        </div>
 
-        <label>Details:</label>
-        <textarea
-          name="details"
-          placeholder="Detailed Description"
-          onChange={inputChanged}
-          value={bugObject.details}
-          required
-        ></textarea>
+        <div className="form-section">
+          <label className="form-name">Details:</label>
+          <textarea
+            name="details"
+            placeholder="Detailed Description"
+            onChange={inputChanged}
+            value={bugObject.details}
+            className="form-input"
+            required
+          ></textarea>
+        </div>
 
-        <label>Steps:</label>
-        <textarea
-          name="steps"
-          placeholder="Steps to Recreate the Bug"
-          onChange={inputChanged}
-          value={bugObject.steps}
-          required
-        ></textarea>
+        <div className="form-section">
+          <label className="form-name">Steps:</label>
+          <textarea
+            name="steps"
+            placeholder="Steps to Recreate the Bug"
+            onChange={inputChanged}
+            value={bugObject.steps}
+            className="form-input"
+            required
+          ></textarea>
+        </div>
 
-        <label>Priority:</label>
-        <select
-          name="priority"
-          onChange={inputChanged}
-          value={bugObject.priority}
-          required
-        >
-          <option value="1">High</option>
-          <option value="2">Medium</option>
-          <option value="3">Low</option>
-        </select>
+        <div className="form-section">
+          <label className="form-name">Priority:</label>
+          <select
+            name="priority"
+            onChange={inputChanged}
+            value={bugObject.priority}
+            className="form-input"
+            required
+          >
+            <option value="1">High</option>
+            <option value="2">Medium</option>
+            <option value="3">Low</option>
+          </select>
+        </div>
 
-        <label>Assigned:</label>
-        <select
-          name="assigned"
-          onChange={inputChanged}
-          value={bugObject.assigned}
-        >
-          <option>D Goings</option>
-        </select>
+        <div className="form-section">
+          <label className="form-name">Assigned:</label>
+          <select
+            name="assigned"
+            onChange={inputChanged}
+            value={bugObject.assigned}
+            className="form-input"
+          >
+            <option>D Goings</option>
+          </select>
+        </div>
 
-        <label>Application Version:</label>
-        <input
-          name="version"
-          placeholder="Application Version"
-          onChange={inputChanged}
-          value={bugObject.version}
-        />
+        <div className="form-section">
+          <label className="form-name">Application Version:</label>
+          <input
+            name="version"
+            placeholder="Application Version"
+            onChange={inputChanged}
+            value={bugObject.version}
+            className="form-input"
+          />
+        </div>
 
-        <button type="submit">{props.title}</button>
+        <button className="button" type="submit">
+          {props.title}
+        </button>
       </form>
     </div>
   );
