@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ViewSection from "./component/bugViewSection";
 import BugModel from "../../../Models/bugModel";
 import "./bugView.css";
@@ -7,32 +7,101 @@ import { markComplete } from "../../../Controllers/Redux/bugSlice";
 
 const BugView = (props) => {
   const dispatch = useDispatch();
-  const bug = new BugModel(props.bug);
+  const [displayEdit, setDisplayEdit] = useState(false);
+  const [editBugObject, setEditBugObject] = useState(new BugModel(props.bug));
+
+  const handleEditBugChange = (event) => {
+    setEditBugObject({
+      ...editBugObject,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const editClicked = () => {
+    setDisplayEdit(!displayEdit);
+  };
+
+  const deleteClicked = () => {};
 
   return (
     <div className="bug-view">
-      <h1 className="bug-title">{bug.name}</h1>
+      {!displayEdit ? (
+        <h1 className="bug-title">{editBugObject.name}</h1>
+      ) : (
+        <input
+          name="name"
+          placehodler="Bug Name"
+          onChange={handleEditBugChange}
+          value={editBugObject.name}
+          className="edit-name"
+          required
+        />
+      )}
+
       <div className="info-view">
-        <ViewSection title="Details" info={bug.details} />
-        <ViewSection title="Steps" info={bug.steps} />
-        <ViewSection title="Priority" info={bug.priority} />
-        <ViewSection title="Creator" info={bug.creator} />
-        <ViewSection title="version" info={bug.version} />
-        <ViewSection title="Created" info={bug.time} />
+        <ViewSection
+          title="Details"
+          editChange={handleEditBugChange}
+          status={displayEdit}
+          info={editBugObject.details}
+        />
+        <ViewSection
+          title="Steps"
+          editChange={handleEditBugChange}
+          status={displayEdit}
+          info={editBugObject.steps}
+        />
+        <ViewSection
+          title="Priority"
+          editChange={handleEditBugChange}
+          status={displayEdit}
+          info={editBugObject.priority}
+        />
+        <ViewSection
+          title="Creator"
+          editChange={handleEditBugChange}
+          status={displayEdit}
+          info={editBugObject.creator}
+        />
+        <ViewSection
+          title="version"
+          editChange={handleEditBugChange}
+          status={displayEdit}
+          info={editBugObject.version}
+        />
+        <ViewSection
+          title="Created"
+          editChange={handleEditBugChange}
+          status={displayEdit}
+          info={editBugObject.time}
+        />
       </div>
-      <div className="button-container">
-        <button
-          onClick={() => {
-            dispatch(markComplete());
-          }}
-          className="button-complete"
-        >
-          Complete
+
+      {!displayEdit ? (
+        <div className="button-container">
+          <button onClick={deleteClicked} className="delete-button">
+            Delete
+          </button>
+          <button onClick={editClicked} className="edit-button">
+            Edit
+          </button>
+          <button
+            onClick={() => {
+              dispatch(markComplete());
+            }}
+            className="button-complete"
+          >
+            Complete
+          </button>
+          <button onClick={props.clicked} className="button-close">
+            Close
+          </button>
+        </div>
+      ) : (
+        <button onClick={editClicked} className="edit-button">
+          Done Editing
         </button>
-        <button onClick={props.clicked} className="button-close">
-          Close
-        </button>
-      </div>
+      )}
     </div>
   );
 };

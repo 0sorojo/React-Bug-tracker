@@ -27,22 +27,34 @@
 .button-container {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  padding: 10px 50px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .button-complete {
-  margin: 5px 0;
+  margin: 5px;
   padding: 5px;
-  width: 40%;
+  flex: 1;
   border-radius: 5px;
   background-color: rgb(195, 241, 109);
   height: 30px;
 }
 
 .button-close {
-  margin: 5px 0;
+  margin: 5px;
   padding: 5px;
-  width: 40%;
+  flex: 1;
+  border-radius: 5px;
+  background-color: rgb(241, 188, 109);
+  height: 30px;
+}
+
+.delete-button {
+  margin: 5px;
+  padding: 5px;
+  flex: 1;
   border-radius: 5px;
   background-color: rgb(241, 188, 109);
   height: 30px;
@@ -50,4 +62,17 @@
 
 .button-close:hover {
   background-color: rgb(179, 58, 58);
+}
+
+.delete-button:hover {
+  background-color: rgb(179, 58, 58);
+}
+
+.edit-button {
+  margin: 5px;
+  padding: 5px;
+  flex: 1;
+  border-radius: 5px;
+  background-color: rgb(195, 241, 109);
+  height: 30px;
 }
