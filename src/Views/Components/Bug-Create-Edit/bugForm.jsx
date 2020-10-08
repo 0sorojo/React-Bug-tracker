@@ -61,6 +61,7 @@ const BugForm = (props) => {
             className="form-input"
             required
           >
+            <option>--Select--</option>
             <option value="1">High</option>
             <option value="2">Medium</option>
             <option value="3">Low</option>
@@ -75,6 +76,7 @@ const BugForm = (props) => {
             value={bugObject.assigned}
             className="form-input"
           >
+            <option>--Select--</option>
             <option>D Goings</option>
           </select>
         </div>
