@@ -11,6 +11,11 @@
 }
 
 .view-info {
-  margin-bottom: 15px;
-  border-bottom: 1px groove rgba(9, 9, 121, 1);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(9, 9, 121, 1);
+}
+
+.words {
+  text-align: center;
 }

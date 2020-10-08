@@ -5,7 +5,7 @@ export default (props) => {
   return (
     <div className="view-section">
       <h2 className="view-info">{props.title}</h2>
-      <p>{props.info}</p>
+      <p className="words">{props.info}</p>
     </div>
   );
 };
