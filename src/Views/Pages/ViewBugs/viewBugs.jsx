@@ -8,7 +8,7 @@ import BugView from "../../Components/Bug-View/bugView";
 
 import "./viewBugs.css";
 
-export default () => {
+const ViewBugPage = () => {
   const [DISPLAY_BUG, SET_DISPLAY_BUG] = useState({
     name: "",
     isDisplayed: false,
@@ -41,3 +41,5 @@ export default () => {
     </div>
   );
 };
+
+export default ViewBugPage;

@@ -5,7 +5,7 @@ import "./bugView.css";
 import { useDispatch } from "react-redux";
 import { markComplete } from "../../../Controllers/Redux/bugSlice";
 
-export default (props) => {
+const BugView = (props) => {
   const dispatch = useDispatch();
   const bug = new BugModel(props.bug);
 
@@ -36,3 +36,5 @@ export default (props) => {
     </div>
   );
 };
+
+export default BugView;
