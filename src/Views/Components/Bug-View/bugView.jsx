@@ -44,36 +44,42 @@ const BugView = (props) => {
           editChange={handleEditBugChange}
           status={displayEdit}
           info={editBugObject.details}
+          name="details"
         />
         <ViewSection
           title="Steps"
           editChange={handleEditBugChange}
           status={displayEdit}
           info={editBugObject.steps}
+          name="steps"
         />
         <ViewSection
           title="Priority"
           editChange={handleEditBugChange}
           status={displayEdit}
           info={editBugObject.priority}
+          name="priority"
         />
         <ViewSection
           title="Creator"
           editChange={handleEditBugChange}
           status={displayEdit}
           info={editBugObject.creator}
+          name="creator"
         />
         <ViewSection
-          title="version"
+          title="Version"
           editChange={handleEditBugChange}
           status={displayEdit}
           info={editBugObject.version}
+          name="version"
         />
         <ViewSection
           title="Created"
           editChange={handleEditBugChange}
           status={displayEdit}
           info={editBugObject.time}
+          name="time"
         />
       </div>
 
