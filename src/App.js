@@ -6,6 +6,7 @@ import Sidebar from "./Views/Sidebar/sidebar";
 import ViewBugPage from "./Views/Pages/ViewBugs/viewBugs";
 import "./App.css";
 import ViewCreateBugPage from "./Views/Pages/CreateBug/createBug";
+import Dashboard from "./Views/Pages/Dashboard/dashboard";
 
 function App() {
   const { auth } = useSelector((state) => state);
@@ -19,6 +20,9 @@ function App() {
           <div className="flex-container">
             <Sidebar />
             <Switch>
+              <Route path="/dashboard">
+                <Dashboard />
+              </Route>
               <Route path="/viewbugs">
                 <ViewBugPage />
               </Route>
