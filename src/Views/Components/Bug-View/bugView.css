@@ -3,7 +3,7 @@
   margin: 20px;
   z-index: 5;
   border: 1px solid rgba(9, 9, 121, 1);
-  box-shadow: 0 2px 2px rgba(9, 9, 121, 0.5);
+  box-shadow: 0px 3px 5px 0px rgba(9, 9, 121, 0.5);
   border-radius: 10px;
   background-color: rgb(1, 109, 131);
   display: flex;
