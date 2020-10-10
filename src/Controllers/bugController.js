@@ -31,6 +31,20 @@ export function retrieveBugs() {
     })
   );
 
+  data.push(
+    new bugModel({
+      _id: 888883,
+      name: "Medium Test",
+      details: "bug cards drift apart during flex wrap",
+      steps: "Open application and navigate to 6viewbugs6",
+      version: "V2.0",
+      priority: 2,
+      assigned: "Sophia",
+      creator: "Lo",
+      time: "20:20",
+    })
+  );
+
   let sorted = data.sort((a, b) => {
     return a.priority - b.priority;
   });

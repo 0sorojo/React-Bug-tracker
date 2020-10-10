@@ -28,7 +28,7 @@ const ViewBugPage = () => {
   }
 
   return (
-    <div className="page-container">
+    <div className="bug-page-container">
       {bugs.map((bug, key) => (
         <BugCard key={key} bug={bug} Clicked={BugClicked} />
       ))}
