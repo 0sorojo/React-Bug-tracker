@@ -1,8 +1,9 @@
 .bug-page-container {
   display: flex;
   flex: 3 0 0;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   overflow: scroll;
   position: relative;
 }
